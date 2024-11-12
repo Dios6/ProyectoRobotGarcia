@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#e9f5f8">
+
+
+    <TextView
+        android:id="@+id/textLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargando contenido..."
+        android:textSize="24dp"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="104dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="visible"/>
+
+    <ProgressBar
+        android:id="@+id/progresoBarra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textLoading"
+        app:layout_constraintVertical_bias="0.144"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/contenidoID"
+        android:layout_width="350dp"
+        android:layout_height="410dp"
+        android:layout_marginBottom="180dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/robot" />
+
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="Ingrese su Usuario"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <Spinner
+            android:id="@+id/spinnerRoles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3590ae"
+            android:onClick="onClickAcceder"
+            android:text="Acceder" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="¿Que te parece nuestra APP?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:rating="4"
+            android:stepSize="0.5" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
